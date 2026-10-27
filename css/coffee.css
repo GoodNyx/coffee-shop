@@ -1,0 +1,217 @@
+/* 
+1--Typography System
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+-line height: 1
+Font-Weight Default: 400
+
+3-- Shadows
+4-- Border-Radius
+5--WhiteSpace
+
+ SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+
+
+
+
+Primary colour	#3E2F23
+Secondary colour	#A67C52
+Background	#F8F6F2
+Heading font	Playfair Display
+Body font	Inter
+Layout	CSS Grid + Flexbox
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  /* Playfair Display Rubik*/
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+
+  color: #a67c52;
+  line-height: 1;
+}
+/* REUSABLE CONTAINER */
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 8rem;
+}
+.space {
+  margin-right: 1.6rem;
+}
+
+header {
+  /* width: 960px; */
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+.active {
+  color: #8c6239;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid #8c6239;
+}
+
+.header_divider {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 4.8rem;
+  background-color: rgba(192, 192, 192, 0.144);
+  margin-bottom: 9.6rem;
+}
+.logo {
+  width: 100%;
+}
+.btnSearch {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+.fa-solid {
+  color: black;
+  font-size: 2rem;
+  margin-left: 9.6rem;
+}
+
+.search-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 2.4rem;
+  border: none;
+  border-radius: 5rem;
+  background-color: #a67c52;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn i {
+  font-size: 1.6rem;
+}
+
+.search-btn:hover {
+  background-color: #8c6239;
+}
+/* header,
+section {
+  margin-bottom: 96px;
+} */
+.coffee_img {
+  width: 100%;
+  height: 50rem;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.section-hero {
+  /* width: 960px; */
+  padding: 4.8rem 0;
+  margin-bottom: 4.8rem;
+}
+.hero_divider {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 4.8rem;
+  background-color: black;
+  margin-bottom: 3rem;
+}
+
+.paraHeading {
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.6;
+
+  letter-spacing: 0.1rem;
+  margin-bottom: 2.4rem;
+}
+small {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+.Heading {
+  font-size: 6.2rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.5rem;
+  margin-bottom: 2.4rem;
+  color: white;
+}
+.subHeading {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  letter-spacing: 0.1rem;
+  margin-bottom: 2.4rem;
+}
+.btnExplore:link,
+.btnExplore:visited {
+  display: inline-block;
+  font-size: 1.8rem;
+  padding: 1.6rem 3.2rem;
+  border-radius: 50px;
+  text-decoration: none;
+
+  /* Transistion Property */
+  transition: background-color 0.3s;
+}
+
+.Explore:link,
+.Explore:visited {
+  background-color: #ffa94d52;
+  color: white;
+}
+
+.Order:link,
+.Order:visited {
+  background-color: #fff4e6;
+  color: #333;
+}
+
+/* Hover Effect */
+
+.Explore:hover,
+.Explore:active {
+  background-color: #8c6239;
+  color: #fff;
+}
+
+.Order:hover,
+.Order:active {
+  background-color: whitesmoke;
+  color: #555;
+}
