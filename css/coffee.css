@@ -1,6 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"); /* 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
 /*
 --- 01 TYPOGRAPHY SYSTEM
+
 
 - Font sizes (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
@@ -63,19 +65,23 @@ body {
 }
 
 /* FEATURES GRID */
-
-.grid {
-  display: grid;
-  column-gap: 6.4rem;
-  row-gap: 9.6rem;
-
-  /* margin-bottom: 9.6rem; */
-}
 .grid:not(:last-child) {
   margin-bottom: 9.6rem;
 }
+.grid--2-cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+.grid--3-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
 .grid--4-cols {
+  display: grid;
   grid-template-columns: repeat(4, 1fr);
+  align-items: center;
 }
 
 /* Vertical line divider */
@@ -129,7 +135,7 @@ strong {
 /* ******************************/
 
 .header-section {
-  padding: 1rem 0;
+  padding: 1.5rem 0 2rem;
   background-color: #2b1206;
 }
 .header-section .container {
@@ -209,6 +215,7 @@ strong {
 /* ******************************/
 
 .hero-section {
+  padding: 1.5rem 0 2rem;
   background-image:
     linear-gradient(to right, rgba(43, 18, 6, 0.5), rgba(43, 18, 6, 0.1)),
     url("../coffee_img/BeanCraft-Hero-Background.png");
@@ -318,115 +325,273 @@ strong {
 /* ******************************/
 /* Specialties*/
 .hero-specialties {
-  width: 100%;
   background-color: #fff8ef;
-  padding: 0.8rem 0;
+  padding: 1.5rem 0 2rem;
 }
-.ourspecial {
-  width: 80%;
-  margin: 0 auto;
+.specialties-heading {
   text-align: center;
-  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.specialties-heading span {
+  display: block;
+  font-size: 1.2rem;
+  color: #e67e00;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  margin-top: 0.02rem;
+}
+.heading-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+}
+.heading-divider::before,
+.heading-divider::after {
+  content: "";
+  flex: 1;
+  max-width: 10rem;
+  height: 1px;
+  background-color: #e6d4c1;
+}
+.heading-divider h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2b1206;
+  margin: 0;
+  white-space: nowrap;
 }
 
-.ourspecial {
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+.general-image-holder {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0 2.6rem;
+  border-right: 1px solid #e6d4c1;
 }
-.ourspecial .hero-our-specialities {
-  color: #ffb82e;
-  font-size: 1.4rem;
+
+.general-image-holder:last-child {
+  border-right: none;
 }
-.ourspecial .freshy-brewed {
-  font-size: 1.8rem;
-}
-.freshy-brewed {
+
+/* make all image the same */
+.specialty-image {
+  width: 9rem;
+  height: 9rem;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+}
+
+.specialty-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 15px;
+}
+
+.specialty-details h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #743a12;
+  margin-bottom: 0.4rem;
+}
+
+.specialty-details p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #4a2a18;
+  margin-bottom: 0.8rem;
+}
+
+.specialty-price {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffb82e;
+}
+/* ******************************/
+
+/* PROMOTIONAL SECTION */
+.hero-promotional {
+  width: 100%;
+  background-color: #fff8ef;
+  padding: 2rem 0;
+}
+.promotion-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+  min-height: 8rem;
+  padding: 1.5rem 4rem;
+  background-image: url("../coffee_img/Promotional_Banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 2rem;
+}
+
+/* PROMOTIONAL TEXT */
+.promotinal-offer h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffb82e;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.promotinal-offer p {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.promotinal-offer span {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #fff8ef;
+}
+
+/* PROMOTIONAL BUTTON */
+.promotional-btn a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.2rem 2rem;
+  background-color: #ffb82e;
+  color: #2b1206;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4rem;
+  transition: all 0.3s ease;
+}
+
+.promotional-btn a:hover {
+  background-color: #e69b12;
+  transform: translateY(-3px);
+}
+
+.promotion-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 4rem;
+}
+
+.promotion-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 4rem;
+}
+
+.promotion-divider {
+  width: 2px;
+  height: 4.5rem;
+  background-color: #fff8ef;
+  flex-shrink: 0;
+}
+/* Testimonial Section */
+
+.hero-testimonial {
+  background-color: #fff8ef;
+  padding: 2rem 0;
+}
+.testimonial-header {
   text-align: center;
+  margin-bottom: 2rem;
 }
 
-.freshy-brewed::before,
-.freshy-brewed::after {
+.testimonial-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonial-content::before,
+.testimonial-content::after {
   content: "";
-  width: 90px;
+  width: 6rem;
   height: 1px;
-  background-color: #743a12;
+  background-color: #e67e00;
 }
 
-/* ******************************/
-/* Specialties and menu
-.specialties-section {
-  background-color: #FFF8EF;
-}
-  .hero-
-
-.specialties-section h2 {
-  color: #2B1206;
+.testimonial-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2b1206;
+  white-space: nowrap;
 }
 
-.specialties-section h3 {
-  color: #743A12;
+.testimonial-header span {
+  display: block;
+  font-size: 1.2rem;
+  color: #4a2a18;
+  font-weight: 400;
+}
+.testimonial-grid {
+  gap: 1.6rem;
 }
 
-.specialties-section p {
-  color: #4A2A18;
+.grid--3-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
 }
 
-.product-price {
-  color: #FFB82E;
-}
-*/
-/* ******************************/
-
-/* ******************************/
-/* Promotional banner
-
-.promotional-section {
-  background-color: #2B1206;
+.image-holder {
+  padding: 0.8rem 1.4rem;
+  border: 1px solid #e6d4c1;
+  border-radius: 1.2rem;
+  background-color: #fffaf4;
 }
 
-.promotional-section h2 {
-  color: #FFFFFF;
+.testimonial-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
 }
 
-.promotional-section p {
-  color: #FFF8EF;
+.testimonial-wrapper img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
-.promotional-section .discount {
-  color: #FFB82E;
-}*/
-/* ******************************/
-
-/* ******************************/
-/*Customer testimonials 
-
-.testimonials-section {
-  background-color: #FFF8EF;
+.testimonial-details {
+  flex: 1;
+  min-width: 0;
 }
 
-.testimonials-section h2 {
-  color: #2B1206;
+.testimonial-details p:first-child {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #2b1206;
+  margin-bottom: 0.3rem;
 }
 
-.testimonial-text {
-  color: #4A2A18;
-}
-
-.testimonial-name {
-  color: #743A12;
+.customer-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2b1206;
 }
 
 .testimonial-stars {
-  color: #FFB82E;
-}*/
-/* ******************************/
+  font-size: 1.2rem;
+  color: #ffb82e;
+  letter-spacing: 0.1rem;
+  line-height: 1;
+}
 
 /* ******************************/
 /* Footer 
