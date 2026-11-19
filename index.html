@@ -3,242 +3,338 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coffee Shop</title>
-    <link rel="stylesheet" href="css/coffee.css" />
+
+    <title>BeanCraft | Coffee Shop</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/coffee.css" />
   </head>
 
   <body>
+    <!-- =========================
+       HEADER SECTION
+  ========================== -->
+
     <header class="header-section">
-      <div class=" container">
-        <a href="#menu" class="header-logo"
-          ><img src="coffee_img/BeanCraftLogo.png"
-        /></a>
+      <div class="container header-container">
+        <a href="#hero" class="header-logo">
+          <img
+            src="coffee_img/BeanCraftLogo.png"
+            alt="BeanCraft Coffee Shop Logo"
+          />
+        </a>
 
         <nav aria-label="Main navigation">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Review</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#specialties">Menu</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
-        <a href="#order" class="header-order"
-          >Order Online<span
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="header-icons"
-            >
-              <path
-                d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18"
-              />
-              <path
-                d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25"
-              />
-              <circle cx="18" cy="20" r="2" />
-              <circle cx="8" cy="20" r="2" /></svg></span
-        ></a>
+
+        <a href="#specialties" class="header-order">
+          Order Online
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
       </div>
     </header>
 
     <main>
+      <!-- =========================
+         HERO SECTION
+    ========================== -->
+
       <section class="hero-section" id="hero">
         <div class="container">
           <div class="hero-content">
-             <div class="subheading">
+            <div class="subheading">
               <span>Welcome to BeanCraft</span>
             </div>
-            <h1 class="description margin-bottom-mdd">
-              Good Coffee,<br /><span class="highlight">Good Mood</span>
+
+            <h1 class="hero-heading margin-bottom-sm">
+              Good Coffee,<br />
+              <span class="highlight">Good Mood</span>
             </h1>
-            <p class="desc margin-bottom-mdd">
-              Experience the perfect blend of rich taste,<br />and warm
-              ambience.
+
+            <p class="hero-description margin-bottom-md">
+              Experience the perfect blend of rich taste and warm ambience.
             </p>
-           <div class="hero-buttons">
-            <a href="#" class="btn btn-order">Order Now
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="header-icons"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>
-            </a>
-            <a href="#" class="btn btn-explore">Learn More
-              
-            </a>
+
+            <div class="hero-buttons">
+              <a href="#specialties" class="btn btn-order">
+                Order Now
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a href="#specialties" class="btn btn-explore"> Learn More </a>
             </div>
           </div>
-            </div>
-           
-
-          <div class="hero-image"></div>
         </div>
       </section>
 
+      <!-- =========================
+         SPECIALTIES SECTION
+    ========================== -->
 
+      <section class="hero-specialties" id="specialties">
+        <div class="container">
+          <div class="specialties-heading">
+            <span>OUR SPECIALTIES</span>
 
-<section class="hero-specialties">
-  <div class="container">
+            <div class="heading-divider">
+              <h2>Freshly Brewed, Just for You</h2>
+            </div>
+          </div>
 
-    <div class="specialties-heading">
-      <span>OUR SPECIALTIES</span>
-      <div class="heading-divider">
-        <h2>Freshly Brewed, Just for You</h2>
-      </div><!-- End of heading-divider-->
-    </div><!-- End of specialties-heading -->
+          <div class="grid grid--4-cols specialties-grid">
+            <!-- Product 1 -->
+            <div class="general-image-holder">
+              <div class="specialty-image">
+                <img src="coffee_img/cappacino.png" alt="Fresh Cappuccino" />
+              </div>
 
-  <div class="grid--4-cols grid">
-    <!-- Production 1 -->
-     <div class="general-image-holder">
+              <div class="specialty-details">
+                <h3>Cappuccino</h3>
+                <p>Rich and creamy.</p>
+                <span class="specialty-price">₦2,500</span>
+              </div>
+            </div>
 
-       <div class="specialty-item">
-        <div class="specialty-image">
-      <img src="coffee_img/cappacino.png" alt="Cappuccino">
-      </div>
-     </div><!-- End of specialty-item -->
+            <!-- Product 2 -->
+            <div class="general-image-holder">
+              <div class="specialty-image">
+                <img src="coffee_img/ice.png" alt="Refreshing Iced Coffee" />
+              </div>
 
-     <div class="specialty-details">
-     <h3>Cappuccino</h3>
-          <p>Rich and creamy.</p>
-          <span class="specialty-price">₦2,500</span>
-     </div>
-     </div>   <!-- End of general-image-holder -->
-    
- <!-- Production 2 -->
-     <div class="general-image-holder">
+              <div class="specialty-details">
+                <h3>Iced Coffee</h3>
+                <p>Cool and refreshing.</p>
+                <span class="specialty-price">₦2,000</span>
+              </div>
+            </div>
 
-       <div class="specialty-item">
-        <div class="specialty-image">
-      <img src="coffee_img/ice.png" alt="Iced Coffee">
-      </div>
-     </div><!-- End of specialty-item -->
+            <!-- Product 3 -->
+            <div class="general-image-holder">
+              <div class="specialty-image">
+                <img src="coffee_img/latte.png" alt="Chocolate Mocha Coffee" />
+              </div>
 
-     <div class="specialty-details">
-      <h3>Iced Coffee</h3>
-          <p>Cool and refreshing.</p>
-          <span class="specialty-price">₦2,000</span>
-     </div>
-     </div> 
+              <div class="specialty-details">
+                <h3>Mocha</h3>
+                <p>Chocolate delight.</p>
+                <span class="specialty-price">₦3,000</span>
+              </div>
+            </div>
 
-      <!-- Production 3 -->
-     <div class="general-image-holder">
+            <!-- Product 4 -->
+            <div class="general-image-holder">
+              <div class="specialty-image">
+                <img src="coffee_img/esprso.png" alt="Fresh Black Coffee" />
+              </div>
 
-       <div class="specialty-item">
-        <div class="specialty-image">
-      <img src="coffee_img/latte.png" alt="Mocha">
-      </div>
-     </div><!-- End of specialty-item -->
-
-     <div class="specialty-details">
-      <h3>Mocha</h3>
-          <p>Chocolate delight.</p>
-          <span class="specialty-price">₦3,000</span>
-     </div>
-     </div> 
-
-      <!-- Production 4 -->
-     <div class="general-image-holder">
-
-       <div class="specialty-item">
-        <div class="specialty-image">
-      <img src="coffee_img/esprso.png" alt="Esprso">
-      </div>
-     </div><!-- End of specialty-item -->
-
-     <div class="specialty-details">
-     <h3>Black Coffee</h3>
-          <p>Bold and smooth.</p>
-          <span class="specialty-price">₦1,500</span>
-     </div>
-     </div> 
-  </div><!-- End of grid--4-cols -->
-
-    
-    </div><!-- End of container -->
-</section>
-<section class="hero-promotional" >
-  <div class="container">
-    <div class="promotion-content">
-  <div class="promotinal-offer">
-    <h3>SPECIAL COFFEE</h3>
-    <p>Get 15% Off</p>
-    <span>on all coffee drink this weekend!</span>
-  </div>
-  <div class="promotion-divider"></div>
-  <div class="promotional-btn">
-    <a href="">Order Now</a>
-  </div>
-    </div>
-  </div>
-</section>
-<section class="hero-testimonial">
-  <div class="container">
-
-    <!-- Testimonial heading -->
-    <div class="testimonial-header">
-      <div class="testimonial-content">
-        <h2>What Our Customers Say</h2>
-      </div>
-
-      <span>Real People. Real Stories.</span>
-    </div>
-
-    <!-- Testimonial cards -->
-    <div class="grid grid--3-cols testimonial-grid">
-
-      <!-- Customer 1 -->
-      <div class="image-holder">
-        <div class="testimonial-wrapper">
-          <img src="coffee_img/sarah.jpg" alt="Sarah Johnson">
-
-          <div class="testimonial-details">
-            <p>"BeanCraft is my happy place. The coffee is amazing!"</p>
-            <p class="customer-name">Sarah Johnson</p>
-            <div class="testimonial-stars">★★★★★</div>
+              <div class="specialty-details">
+                <h3>Black Coffee</h3>
+                <p>Bold and smooth.</p>
+                <span class="specialty-price">₦1,500</span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Customer 2 -->
-      <div class="image-holder">
-        <div class="testimonial-wrapper">
-          <img src="coffee_img/joseph.jpg" alt="David Wilson">
+      <!-- =========================
+         PROMOTIONAL SECTION
+    ========================== -->
 
-          <div class="testimonial-details">
-            <p>"Great service and cozy vibe. Highly recommended!"</p>
-            <p class="customer-name">David Wilson</p>
-            <div class="testimonial-stars">★★★★★</div>
+      <section class="hero-promotional">
+        <div class="container">
+          <div class="promotion-content">
+            <div class="promotional-offer">
+              <h3>Special Coffee Offer</h3>
+
+              <p>Get 15% Off</p>
+
+              <span> On all coffee drinks this weekend! </span>
+            </div>
+
+            <div class="promotion-divider"></div>
+
+            <div class="promotional-btn">
+              <a href="#specialties">
+                Order Now
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Customer 3 -->
-      <div class="image-holder">
-        <div class="testimonial-wrapper">
-          <img src="coffee_img/emily.jpg" alt="Emily Davis">
+      <!-- =========================
+         TESTIMONIAL SECTION
+    ========================== -->
 
-          <div class="testimonial-details">
-            <p>"Best coffee in town!"</p>
-            <p class="customer-name">Emily Davis</p>
-            <div class="testimonial-stars">★★★★★</div>
+      <section class="hero-testimonial" id="testimonials">
+        <div class="container">
+          <div class="testimonial-header">
+            <div class="testimonial-content">
+              <h2>What Our Customers Say</h2>
+            </div>
+
+            <span>Real People. Real Stories.</span>
+          </div>
+
+          <div class="grid grid--3-cols testimonial-grid">
+            <!-- Customer 1 -->
+            <article class="testimonial-card">
+              <div class="testimonial-wrapper">
+                <img src="coffee_img/sarah.jpg" alt="Sarah Johnson" />
+
+                <div class="testimonial-details">
+                  <p>"BeanCraft is my happy place. The coffee is amazing!"</p>
+
+                  <p class="customer-name">Sarah Johnson</p>
+
+                  <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                    ★★★★★
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Customer 2 -->
+            <article class="testimonial-card">
+              <div class="testimonial-wrapper">
+                <img src="coffee_img/joseph.jpg" alt="David Wilson" />
+
+                <div class="testimonial-details">
+                  <p>"Great service and cozy vibe. Highly recommended!"</p>
+
+                  <p class="customer-name">David Wilson</p>
+
+                  <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                    ★★★★★
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Customer 3 -->
+            <article class="testimonial-card">
+              <div class="testimonial-wrapper">
+                <img src="coffee_img/emily.jpg" alt="Emily Davis" />
+
+                <div class="testimonial-details">
+                  <p>"Best coffee in town!"</p>
+
+                  <p class="customer-name">Emily Davis</p>
+
+                  <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                    ★★★★★
+                  </div>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
+      </section>
+    </main>
+
+    <!-- =========================
+       FOOTER SECTION
+  ========================== -->
+
+    <footer class="footer-section" id="contact">
+      <div class="container">
+        <div class="grid grid--4-cols footer-grid">
+          <!-- Footer Brand -->
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <img src="coffee_img/BeanCraftLogo.png" alt="BeanCraft Logo" />
+            </div>
+
+            <p>Bringing people together, one cup at a time.</p>
+
+            <div class="footer-icons">
+              <a href="#" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+
+              <a href="#" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+
+              <a href="#" aria-label="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#specialties">Menu</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#testimonials">Reviews</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Opening Hours -->
+          <div class="footer-hours">
+            <h3>Opening Hours</h3>
+
+            <ul>
+              <li>Mon - Fri: 7am - 10pm</li>
+              <li>Sat - Sun: 8am - 11pm</li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="footer-subscribe">
+            <h3>Subscribe</h3>
+
+            <p>Get updates and special offers.</p>
+
+            <form class="subscribe-form">
+              <label for="txt-sub">Email Address</label>
+
+              <input
+                type="email"
+                name="email"
+                id="txt-sub"
+                placeholder="Enter your email"
+                required
+              />
+
+              <button type="submit" class="btn-submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 BeanCraft Coffee Shop. All rights reserved.</p>
+        </div>
       </div>
-
-    </div>
-  </div>
-</section>
- </main>
-
- <footer></footer>   
+    </footer>
   </body>
 </html>
