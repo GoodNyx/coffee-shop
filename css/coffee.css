@@ -682,10 +682,8 @@ body {
 
   width: 3.2rem;
   height: 3.2rem;
-
   background-color: #743a12;
   border-radius: 50%;
-
   transition:
     background-color 0.3s ease,
     transform 0.3s ease;
@@ -698,6 +696,9 @@ body {
 }
 
 /* NEWSLETTER FORM */
+.subscribe-form {
+  max-width: 30rem;
+}
 
 .footer-subscribe p {
   font-size: 1.2rem;
@@ -714,14 +715,11 @@ body {
 .subscribe-form input {
   display: block;
   width: 100%;
-
   padding: 1rem;
   margin-bottom: 1rem;
-
   border: 1px solid #743a12;
   border-radius: 0.5rem;
   outline: none;
-
   font-family: inherit;
   font-size: 1.2rem;
 }
@@ -868,5 +866,8 @@ body {
   }
   .footer-bottom {
     margin-top: 2.4rem;
+  }
+  .subscribe-form input {
+    width: 60%;
   }
 }
